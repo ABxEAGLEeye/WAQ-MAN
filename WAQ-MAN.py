@@ -1618,7 +1618,7 @@ while True:
         ghost_1.left(90)
     
 #ghost_2 Movement
-    print(ghost_2.xcor(),ghost_2.ycor())
+    
     if ghost_2.xcor()==-10 and ghost_2.ycor()==0:
         ghost_2.left(90)
         ghost_2.setx(-10)
