@@ -7,6 +7,9 @@ wn.bgcolor("black")
 wn.setup(height=550,width=550)
 wn.tracer(0)
 
+
+
+
 #score
 score=0
 
@@ -1955,7 +1958,11 @@ while True:
 
     #if player touches power up 5
     if player.xcor()==power5.xcor() and player.ycor()==power5.ycor():
-        player.color("green")
+        player.color("white")
+        ghost_1.color("blue")
+        ghost_2.color("blue")
+        ghost_3.color("blue")
+        ghost_4.color("blue")
         power5.hideturtle()
 
         #score update if plyer touches power up
@@ -1964,10 +1971,17 @@ while True:
         pen.clear()
         pen.write("Score: {}".format(score) ,align="center",font=("Arial",15,"normal"))
 
+    
+    
+
+
+
     #If ghost touches player, game stops
     if (ghost_1.xcor()==player.xcor() and ghost_1.ycor()==player.ycor()) or (ghost_3.xcor()==player.xcor() and ghost_3.ycor()==player.ycor()) or (ghost_4.xcor()==player.xcor() and ghost_4.ycor()==player.ycor()) or (ghost_2.xcor()==player.xcor() and ghost_2.ycor()==player.ycor()):
-        break
 
+        break
+    
+    
     
 
 
