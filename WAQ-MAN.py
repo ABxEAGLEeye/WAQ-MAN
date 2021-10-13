@@ -1984,21 +1984,25 @@ while True:
     #If ghost touches player, game stops
 
     if ((ghost_1.xcor()==player.xcor() and ghost_1.ycor()==player.ycor())and (ghost_color=="red")):
+        print("Final Score:",score)
         break  
     elif ((ghost_1.xcor()==player.xcor() and ghost_1.ycor()==player.ycor())and (ghost_color=="blue")):
         ghost_1.hideturtle()
         ghost_num=ghost_num-1
     if ((ghost_2.xcor()==player.xcor() and ghost_2.ycor()==player.ycor())and (ghost_color=="red")):
+        print("Final Score:",score)
         break  
     elif ((ghost_2.xcor()==player.xcor() and ghost_2.ycor()==player.ycor())and (ghost_color=="blue")):
         ghost_2.hideturtle()
         ghost_num=ghost_num-1
     if ((ghost_3.xcor()==player.xcor() and ghost_3.ycor()==player.ycor())and (ghost_color=="red")):
+        print("Final Score:",score)
         break  
     elif ((ghost_3.xcor()==player.xcor() and ghost_3.ycor()==player.ycor())and (ghost_color=="blue")):
         ghost_3.hideturtle()
         ghost_num=ghost_num-1
     if ((ghost_4.xcor()==player.xcor() and ghost_4.ycor()==player.ycor())and (ghost_color=="red")):
+        print("Final Score:",score)
         break  
     elif ((ghost_4.xcor()==player.xcor() and ghost_4.ycor()==player.ycor())and (ghost_color=="blue")):
         ghost_4.hideturtle()
@@ -2006,6 +2010,7 @@ while True:
     
 
     if (score==10000) and (ghost_num<=0):
+        print("Final Score:",score)
         break
     
 
