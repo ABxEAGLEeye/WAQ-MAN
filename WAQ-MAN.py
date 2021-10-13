@@ -8,7 +8,11 @@ wn.setup(height=550,width=550)
 wn.tracer(0)
 
 
+#ghost colour 
+ghost_color="red"
 
+#ghost number
+ghost_num=5
 
 #score
 score=0
@@ -1964,6 +1968,7 @@ while True:
         ghost_3.color("blue")
         ghost_4.color("blue")
         power5.hideturtle()
+        ghost_color="blue"
 
         #score update if plyer touches power up
         score=score+2
@@ -1977,11 +1982,31 @@ while True:
 
 
     #If ghost touches player, game stops
-    if (ghost_1.xcor()==player.xcor() and ghost_1.ycor()==player.ycor()) or (ghost_3.xcor()==player.xcor() and ghost_3.ycor()==player.ycor()) or (ghost_4.xcor()==player.xcor() and ghost_4.ycor()==player.ycor()) or (ghost_2.xcor()==player.xcor() and ghost_2.ycor()==player.ycor()):
 
+    if ((ghost_1.xcor()==player.xcor() and ghost_1.ycor()==player.ycor())and (ghost_color=="red")):
+        break  
+    elif ((ghost_1.xcor()==player.xcor() and ghost_1.ycor()==player.ycor())and (ghost_color=="blue")):
+        ghost_1.hideturtle()
+        ghost_num=ghost_num-1
+    if ((ghost_2.xcor()==player.xcor() and ghost_2.ycor()==player.ycor())and (ghost_color=="red")):
+        break  
+    elif ((ghost_2.xcor()==player.xcor() and ghost_2.ycor()==player.ycor())and (ghost_color=="blue")):
+        ghost_2.hideturtle()
+        ghost_num=ghost_num-1
+    if ((ghost_3.xcor()==player.xcor() and ghost_3.ycor()==player.ycor())and (ghost_color=="red")):
+        break  
+    elif ((ghost_3.xcor()==player.xcor() and ghost_3.ycor()==player.ycor())and (ghost_color=="blue")):
+        ghost_3.hideturtle()
+        ghost_num=ghost_num-1
+    if ((ghost_4.xcor()==player.xcor() and ghost_4.ycor()==player.ycor())and (ghost_color=="red")):
+        break  
+    elif ((ghost_4.xcor()==player.xcor() and ghost_4.ycor()==player.ycor())and (ghost_color=="blue")):
+        ghost_4.hideturtle()
+        ghost_num=ghost_num-1
+    
+
+    if (score==10000) and (ghost_num<=0):
         break
-    
-    
     
 
 
